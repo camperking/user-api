@@ -48,6 +48,7 @@ const user = {
 accepts POST:
 ```javascript
 const user = {
+    name: 'String',
     sessionID: 'String'
 }
 ```

@@ -14,3 +14,8 @@ exports.loginSchema = yup.object().shape({
     name,
     password
 });
+
+exports.logoutSchema = yup.object().shape({
+    name,
+    sessionId: yup.string().required()
+});
