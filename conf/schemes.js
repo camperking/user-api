@@ -25,3 +25,10 @@ exports.authSchema = yup.object().shape({
     name,
     sessionId
 });
+
+exports. updateSchema = yup.object().shape({
+    name,
+    password,
+    email,
+    sessionId
+});

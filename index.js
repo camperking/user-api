@@ -7,6 +7,7 @@ const { register } = require('./api/register');
 const { login } = require('./api/login');
 const { logout } = require('./api/logout');
 const { auth } = require('./api/auth');
+const { update } = require('./api/update');
 
 dbInit().then(() => {
     polka()
@@ -18,6 +19,7 @@ dbInit().then(() => {
     .post('/login', login)
     .post('/logout', logout)
     .post('/auth', auth)
+    .post('/update', update)
     .listen(PORT, err => {
         if (err) throw err;
         console.log('Running on http://localhost:3000');

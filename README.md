@@ -82,6 +82,7 @@ const auth = {
 accepts POST:
 ```javascript
 const user = {
+    name: 'String',
     password: 'String',
     email: 'Email',
     sessionID: 'String'
@@ -102,6 +103,10 @@ const update = {
 * yup - Yup is a JavaScript schema builder for value parsing and validation.
 
 ## Version History
+
+### 0.1.0
+* all core features working
+* ```register login logout auth update```
 
 ### 0.0.1
 * first draft of api
