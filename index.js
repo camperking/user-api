@@ -4,6 +4,7 @@ const { dbInit } = require('./db');
 var bodyParser = require('body-parser');
 
 const { register } = require('./api/register');
+const { login } = require('./api/login');
 
 dbInit().then(() => {
     polka()
@@ -12,6 +13,7 @@ dbInit().then(() => {
         res.end('200');
     })
     .post('/register', register)
+    .post('/login', login)
     .listen(PORT, err => {
         if (err) throw err;
         console.log('Running on http://localhost:3000');

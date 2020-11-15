@@ -29,7 +29,7 @@ const user = {
 
 accepts POST:
 ```javascript
-const user = {
+const login = {
     name: 'String',
     password: 'String'
 }
@@ -39,7 +39,6 @@ returns JSON:
 ```javascript
 const user = {
     name: 'String',
-    email: 'Email',
     sessionId: 'String'
 }
 ```

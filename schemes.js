@@ -1,7 +1,16 @@
 const yup = require('yup');
 
+const name = yup.string().min(3).max(20).matches(/^\w+\d*$/g).required();
+const password = yup.string().min(6).required();
+const email = yup.string().email().required();
+
 exports.registerSchema = yup.object().shape({
-    name: yup.string().min(3).max(20).matches(/^\w+\d*$/g).required(),
-    password: yup.string().min(6).required(),
-    email: yup.string().email().required()
+    name,
+    password,
+    email
+});
+
+exports.loginSchema = yup.object().shape({
+    name,
+    password
 });
