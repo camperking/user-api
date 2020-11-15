@@ -96,8 +96,12 @@ const update = {
 ```
 
 ## Dependencies
-
 * polka - Polka is an extremely minimal, highly performant Express.js alternative.
 * body-parser - Node.js body parsing middleware.
 * lokijs - in-memory nosql database
 * yup - Yup is a JavaScript schema builder for value parsing and validation.
+
+## Version History
+
+### 0.0.1
+* first draft of api

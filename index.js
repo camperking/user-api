@@ -1,6 +1,6 @@
 const polka = require('polka');
-const { PORT } = require('./config');
-const { dbInit } = require('./db');
+const { PORT } = require('./conf/config');
+const { dbInit } = require('./utils/db');
 var bodyParser = require('body-parser');
 
 const { register } = require('./api/register');

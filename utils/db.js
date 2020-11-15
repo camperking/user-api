@@ -1,5 +1,5 @@
 const loki = require('lokijs');
-const { dbCollections, dbFile, saveInterval } = require('./config');
+const { dbCollections, dbFile, saveInterval } = require('../conf/config');
 
 
 let db;
@@ -26,7 +26,7 @@ function checkCollections(dbCollections) {
         const unique = element.unique;
 
         collections[collection] = db.getCollection(collection);
-        
+
         if (collections[collection] === null) {
             collections[collection] = db.addCollection(collection, { unique });
         }

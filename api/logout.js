@@ -1,5 +1,5 @@
-const { collections } = require('../db');
-const { logoutSchema } = require('../schemes');
+const { collections } = require('../utils/db');
+const { logoutSchema } = require('../conf/schemes');
 
 exports.logout = async (req, res) => {
     const users = collections.users;

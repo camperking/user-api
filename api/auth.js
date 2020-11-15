@@ -1,6 +1,6 @@
-const { collections } = require('../db');
-const { authSchema } = require('../schemes');
-const { getHash } = require('../hash');
+const { collections } = require('../utils/db');
+const { authSchema } = require('../conf/schemes');
+const { getHash } = require('../utils/hash');
 
 exports.auth = async (req, res) => {
     const users = collections.users;

@@ -1,6 +1,6 @@
-const { collections } = require('../db');
-const { registerSchema } = require('../schemes');
-const { getHash } = require('../hash');
+const { collections } = require('../utils/db');
+const { registerSchema } = require('../conf/schemes');
+const { getHash } = require('../utils/hash');
 
 
 exports.register = async (req, res) => {
