@@ -19,7 +19,6 @@ const user = {
 returns JSON:
 ```javascript
 const user = {
-    _id: 'ObjectID',
     name: 'String',
     email: 'Email',
     sessionId: 'String'
@@ -39,7 +38,6 @@ const user = {
 returns JSON:
 ```javascript
 const user = {
-    _id: 'ObjectID',
     name: 'String',
     email: 'Email',
     sessionId: 'String'
@@ -67,6 +65,7 @@ const logout = {
 accepts POST:
 ```javascript
 const user = {
+    name: 'String',
     sessionID: 'String'
 }
 ```
@@ -98,5 +97,7 @@ const update = {
 
 ## Dependencies
 
-* polka - smaller and faster than expressjs
-* lokijs - in memory nosql database
+* polka - Polka is an extremely minimal, highly performant Express.js alternative.
+* body-parser - Node.js body parsing middleware.
+* lokijs - in-memory nosql database
+* yup - Yup is a JavaScript schema builder for value parsing and validation.

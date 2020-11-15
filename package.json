@@ -4,8 +4,15 @@
   "description": "api microservice for registration and authentication",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "lokijs": "^1.5.11",
+    "polka": "^0.5.2",
+    "yup": "^0.29.3"
+  }
 }
