@@ -1,7 +1,5 @@
 const { collections } = require('../db');
 const { logoutSchema } = require('../schemes');
-const { getHash } = require('../hash');
-
 
 exports.logout = async (req, res) => {
     const users = collections.users;
