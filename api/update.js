@@ -15,7 +15,6 @@ exports.update = async (req, res) => {
             if (update.sessionId === user.sessionId) {
 
                 user.password = getHash(update.password);
-                user.email = update.email;
 
                 users.update(user);
 

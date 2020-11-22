@@ -18,18 +18,18 @@ exports.register = async (req, res) => {
 
             newUser.password = getHash(newUser.password);
 
-            newUser.sessionId = getHash(newUser.name + new Date() + Math.random());
+            const sessionId = getHash(newUser.name + new Date() + Math.random()); 
+            
+            newUser.sessionId = sessionId;
 
-            const registeredUser = users.insert(newUser);
+            users.insert(newUser);
 
-            let response = {...registeredUser};
+            const registeredUser = {
+                name: newUser.name,
+                sessionId
+            }
 
-            delete response.password;
-            delete response.registered;
-            delete response.meta;
-            delete response['$loki'];
-
-            res.end(JSON.stringify(response));
+            res.end(JSON.stringify(registeredUser));
         } else {
             res.end('{ "error": "user exists" }');
         }

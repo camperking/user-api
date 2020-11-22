@@ -9,7 +9,7 @@ If something fails routes will response with ```{ "error": "Error Message" }```
 ### /register  
 accepts POST:
 ```javascript
-const user = {
+const newUser = {
     name: 'String',
     password: 'String',
     email: 'Email'
@@ -20,7 +20,6 @@ returns JSON:
 ```javascript
 const user = {
     name: 'String',
-    email: 'Email',
     sessionId: 'String'
 }
 ```
@@ -97,12 +96,21 @@ const update = {
 ```
 
 ## Dependencies
+### production
 * polka - Polka is an extremely minimal, highly performant Express.js alternative.
 * body-parser - Node.js body parsing middleware.
 * lokijs - in-memory nosql database
 * yup - Yup is a JavaScript schema builder for value parsing and validation.
 
+### development
+* nodemon
+* supertest
+* jest
+
 ## Version History
+
+### 0.2.0
+* tests for all api routes
 
 ### 0.1.0
 * all core features working

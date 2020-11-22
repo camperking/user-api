@@ -1,6 +1,6 @@
 const yup = require('yup');
 
-const name = yup.string().min(3).max(20).matches(/^\w+\d*$/g).required();
+const name = yup.string().min(4).max(20).matches(/^\w+\d*$/g, 'name must contain only a-z, A-Z, 0-9').required();
 const password = yup.string().min(6).required();
 const email = yup.string().email().required();
 const sessionId = yup.string().required();
